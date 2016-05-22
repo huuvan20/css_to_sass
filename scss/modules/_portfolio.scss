@@ -1,0 +1,71 @@
+// ==========================================================================
+// Portfolio
+// ==========================================================================
+
+.portfolio-item {
+	@extend %main-width;
+	margin: 3em auto;
+	@include mq(medium) {
+		width: 50%;
+		padding: 0.5em;
+		margin: 1em 0;
+	}
+	@include mq(large) {
+		width: calc(100% / 3);
+	}
+	&:nth-child(3n+1) {
+		background: #FFFF99;
+	}
+	&:nth-child(3n+2) {
+		background: #CCFFCC;
+	}
+	&:nth-child(3n+3) {
+		background: #99CCFF;
+	}
+	img {
+		width: 100%;
+	}
+	p {
+		width: 100%;
+		margin: 0;
+		padding-bottom: 1em;
+		@include mq(large) {
+			font-size: 0.98em;
+		}
+	}
+	h3, p {
+		@include mq(medium) {
+			width: 70%;
+			margin: 1em auto;
+			font-size: 1.1em;
+		}
+	}
+}
+
+.portfolio-HCMC {
+	@extend %main-width;
+	margin: auto;
+	background: #afeeee;
+	padding-bottom: 0.5em;
+	@include mq(medium) {
+		width: 100%;
+		padding-bottom: 1em;
+	}
+	img {
+		max-height: 100%;
+		max-width: 100%;
+		@include mq(large) {
+			padding-top: 1em;
+		}
+	}
+	p {
+		@include mq(medium) {
+			width: 70%;
+			margin: auto;
+		}
+		@include mq(large) {
+			width: 50%;
+		}
+	}
+}
+ 

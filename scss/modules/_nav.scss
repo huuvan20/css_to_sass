@@ -1,0 +1,97 @@
+// ==========================================================================
+// Navigation Styles
+// ==========================================================================
+
+.main-nav {
+	@extend %main-width;
+	min-height: 250px;
+	margin: auto;
+	@include mq(medium) {
+		min-height: 200px;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: column;
+		flex-direction: column;
+		-webkit-justify-content: center;
+		justify-content: center;
+	}
+	@include mq(large) {
+		-webkit-flex-direction: row;
+		flex-direction: row;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		-webkit-align-items: center;
+		align-items: center;
+		min-height: 150px;
+	}
+	h1 {
+		font-size: 1.8em;
+		padding: 1.1em 0;
+		margin: 0;
+		@include mq(medium) {
+			font-size: 1.8em;
+			padding-top: 0;
+		}
+		@include mq(large) {
+			margin: 0;
+			padding: 0;
+		}
+		a {
+			color: #CC0000;
+		}
+	}
+	.nav {
+		margin: 0;
+		@include mq(medium) {
+			width: 50%;
+			margin: 0 auto;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-flex-direction: row;
+			flex-direction: row;
+		}
+		@include mq(large) {
+			width: 34%;
+			margin: 0;
+			padding: 0;
+		}
+		a {
+			display: block;
+			padding: 0.85em 0;
+			color: #777;
+			text-transform: uppercase;
+			&:hover {
+				color: #111;
+				transition: 0.5s;
+			}
+		}
+		li {
+			margin: 0.4em 0;
+			background: #FCF9FC;
+			font-size: 1em;
+			line-height: 1em;
+			font-weight: bold;
+			border-bottom: 2px solid #EEEEEE;
+			@include mq(medium) {
+				width: calc(100% / 3);
+				background: #f7f5f0;
+				border-bottom: 2px solid #f7f5f0;
+			}
+			&:hover {
+				border-bottom-color: lightgreen;
+				transition: 0.5s;
+			}
+			a {
+				@include mq(medium) {
+					padding: 0.5em;
+					font-size: 0.95em;
+					color: #333;
+				}
+				@include mq(large) {
+					font-size: 0.8em;
+				}
+			}
+		}
+	}
+}
+

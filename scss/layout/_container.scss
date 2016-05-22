@@ -1,0 +1,25 @@
+// ==========================================================================
+// Container
+// ==========================================================================
+
+.container {
+	background: #FCFBFC;;
+	padding: 2em 0 1em 0;
+	@include mq(medium) {
+		margin-top: 4em;
+		padding: 0 1em;
+		padding-bottom: 2em;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		flex-flow: row wrap;
+	}
+	h2 {
+		padding: 0.4em 0;
+		color: #222;
+		@include mq(medium) {
+			width: 100%;
+			margin-top: 2.5em;
+		}
+	}
+}

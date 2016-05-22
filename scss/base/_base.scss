@@ -1,0 +1,41 @@
+// ==========================================================================
+// Base Styles
+// ==========================================================================
+
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-boz-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	@extend %center-align;
+	font-family: $font-family--primary;
+	font-size: $base__font-size;
+	color: $color-primary;
+	background: #f7f5f0;
+	line-height: ($base__line/$base__font-size);
+}
+
+// Text
+
+h2 {
+	@extend %hdln-sec;
+};
+
+a {
+	text-decoration: none;
+	color: #222;
+}
+
+// Lists
+
+ul {
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+}

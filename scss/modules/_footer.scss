@@ -1,0 +1,94 @@
+// ==========================================================================
+// Footer
+// ==========================================================================
+
+footer {
+	@extend %main-width;
+	height: 380px;
+	margin: auto;
+	h2 {
+		padding: 2em 0;
+		color: #222;
+	}
+	p {
+		line-height: 1.5em;
+	}
+}
+
+.footer-content {
+	@include mq(medium) {
+		width: 70%;
+		margin: 1.5em auto 2em auto;
+		font-size: 1.2em;
+	}
+}
+
+.contact-items {
+	line-height: 2.5em;
+	margin: 1.5em auto 3em auto;
+}
+
+.foot-footer {
+	border-top: 1px solid #CCCCCC;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	@include mq(medium) {
+		margin-bottom: 3em;
+		font-size: 1.1em;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		-webkit-align-items: center;
+		align-items: center;
+	}
+	@include mq(large) {
+		margin: 0;
+	}
+	p {
+		margin: 1.7em 0;
+		font-weight: bold;
+		font-size: 0.9em;
+		color: #222;
+		a:hover {
+			color: red;
+			text-transform: uppercase;
+			transition: 0.5s;
+		}
+	}
+
+}
+
+.mobile-nav {
+	text-transform: uppercase;
+	@include mq(medium) {
+		display: none;
+	}
+}
+
+.foot-nav {
+	display: none;
+	@include mq(medium) {
+		display: -webkit-flex;
+		display: flex;
+	}
+	a {
+		@include mq(medium) {
+			text-transform: uppercase;
+			font-size: 0.8em;
+			font-weight: bold;
+		}
+	}
+	li {
+		@include mq(medium) {
+			margin-left: 3em;
+			border-bottom: 2px solid #f7f5f0;
+		}
+	}
+	li:hover {
+		@include mq(medium) {
+			border-bottom: 2px solid lightgreen;
+			transition: 0.5s;
+		}
+	}
+}

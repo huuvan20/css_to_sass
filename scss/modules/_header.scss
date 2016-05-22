@@ -1,0 +1,36 @@
+// ==========================================================================
+// Header
+// ==========================================================================
+
+header {
+	@extend %main-width;
+	@extend %margin-auto;
+	@include mq(medium) {
+		@include flexbox();
+		-webkit-flex-direction: row;
+		flex-direction: row;
+		margin: 0 auto;
+	}
+	img {
+		width: 70%;
+		box-shadow: 10px 10px 10px rgba(0,0,0,.5);
+		@include mq(medium) {
+			order: 1;
+			width: 40%;
+			height: 40%;
+		}
+	}
+	p {
+		font-size: 1.1em;
+		line-height: 1.4em;
+		@include mq(medium) {
+			margin:0 1em 0 0;
+			font-size: 1.3em;
+			text-align: left;
+			width: 60%;
+		}
+		@include mq(large) {
+			margin-right: 2em;
+		}
+	}
+}
