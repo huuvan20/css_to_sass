@@ -35,13 +35,49 @@
   display: flex;
 }
 
-@mixin flex($values) {
-  -webkit-box-flex: $values;
-  -moz-box-flex:  $values;
-  -webkit-flex:  $values;
-  -ms-flex:  $values;
-  flex:  $values;
+// Flex direction
+
+@mixin flex-direction($dir) {
+	-webkit-flex-direction: $dir;
+    -ms-flex-direction: $dir;
+    flex-direction: $dir;
 }
+
+// Flex flow
+
+@mixin flex-flow($values) {
+  -webkit-flex-flow:  $values;
+  flex-flow:  $values;
+}
+
+// Justify content
+
+@mixin justify-content($val) {
+	-ms-flex-pack: $val;
+	-webkit-justify-content: $val;
+	justify-content: $val;
+}
+
+// Align content
+
+@mixin align-content($val) {
+	-webkit-box-align-content: $val;
+    -webkit-align-content: $val;
+    -ms-flex-align-content: $val;
+    align-content: $val;
+}
+
+// Align items
+
+@mixin align-items($val) {
+	-webkit-box-align: $val;
+    -webkit-align-items: $val;
+    -moz-box-align: $val;
+    -ms-flex-align: $val;
+    align-items: $val;
+}
+
+// Order flex
 
 @mixin order($val) {
   -webkit-box-ordinal-group: $val;  
@@ -49,4 +85,37 @@
   -ms-flex-order: $val;     
   -webkit-order: $val;  
   order: $val;
+}
+
+// Height and width of element
+
+@mixin elem-size($width:null, $height:null) {
+	width: $width;
+	height: $height;
+}
+
+// Border mixin
+
+@mixin border($line-thick, $line-type, $color, $pos: null) {
+	@if $pos == null {
+		border: $line-thick $line-type $color;
+	} @else {
+		border-#{$pos}: $line-thick $line-type $color;
+	}
+}
+
+// Text styles
+
+@mixin text($size: null, $l-height: null, $weight: null, $color: null) {
+	font-size: $size;
+	line-height: $l-height;
+	font-weight: $weight;
+	color: $color;
+}
+
+// Set margin & padding
+
+@mixin set-mp($margin: null, $padding: null) {
+	margin: $margin;
+	padding: $padding;
 }

@@ -9,14 +9,11 @@
 }
 
 body {
-	margin: 0;
-	padding: 0;
+	@include set-mp(0, 0);
 	@extend %center-align;
+	@include text($base__font-size, ($base__line/$base__font-size), $color: $color-primary);
 	font-family: $font-family--primary;
-	font-size: $base__font-size;
-	color: $color-primary;
-	background: #f7f5f0;
-	line-height: ($base__line/$base__font-size);
+	background: palette(white, dark);
 }
 
 // Text
@@ -27,7 +24,7 @@ h2 {
 
 a {
 	text-decoration: none;
-	color: #222;
+	color: $color-primary;
 }
 
 // Lists

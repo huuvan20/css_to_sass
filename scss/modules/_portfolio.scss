@@ -4,67 +4,66 @@
 
 .portfolio-item {
 	@extend %main-width;
-	margin: 3em auto;
+	@include set-mp(em(48px) auto);
 	@include mq(medium) {
-		width: 50%;
-		padding: 0.5em;
-		margin: 1em 0;
+		@include elem-size(50%);
+		@include set-mp(em(16px) 0, em(8px));
 	}
 	@include mq(large) {
-		width: calc(100% / 3);
+		@include elem-size(calc(100% / 3));
 	}
 	&:nth-child(3n+1) {
-		background: #FFFF99;
+		background: $egg-sour;
 	}
 	&:nth-child(3n+2) {
-		background: #CCFFCC;
+		background: $energy-yellow;
 	}
 	&:nth-child(3n+3) {
-		background: #99CCFF;
+		background: $emerald;
 	}
 	img {
-		width: 100%;
+		@include elem-size(100%);
 	}
 	p {
-		width: 100%;
-		margin: 0;
-		padding-bottom: 1em;
+		@include elem-size(100%);
+		@include set-mp(0);
+		padding-bottom: em(16px);
 		@include mq(large) {
-			font-size: 0.98em;
+			@include text(em(15px));
 		}
 	}
 	h3, p {
 		@include mq(medium) {
-			width: 70%;
-			margin: 1em auto;
-			font-size: 1.1em;
+			@include elem-size(70%);
+			@include set-mp(em(16px) auto);
+			@include text(em(18px));
 		}
 	}
 }
 
 .portfolio-HCMC {
 	@extend %main-width;
-	margin: auto;
-	background: #afeeee;
-	padding-bottom: 0.5em;
+	@extend %margin-auto;
+	background: palette(grey, xx-light);
+	padding-bottom: em(8px);
 	@include mq(medium) {
-		width: 100%;
-		padding-bottom: 1em;
+		@include elem-size(100%);
+		padding-bottom: em(16px);
 	}
 	img {
 		max-height: 100%;
 		max-width: 100%;
 		@include mq(large) {
-			padding-top: 1em;
+			padding-top: em(16px);
 		}
 	}
 	p {
 		@include mq(medium) {
-			width: 70%;
+			@include elem-size(70%);
 			margin: auto;
 		}
 		@include mq(large) {
-			width: 50%;
+			@include elem-size(50%);
 		}
 	}
 }

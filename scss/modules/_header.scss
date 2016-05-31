@@ -7,30 +7,27 @@ header {
 	@extend %margin-auto;
 	@include mq(medium) {
 		@include flexbox();
-		-webkit-flex-direction: row;
-		flex-direction: row;
-		margin: 0 auto;
+		@include flex-direction(row);
+		@include set-mp(0 auto);
 	}
 	img {
-		width: 70%;
+		@include elem-size(70%);
 		box-shadow: 10px 10px 10px rgba(0,0,0,.5);
 		@include mq(medium) {
-			order: 1;
-			width: 40%;
-			height: 40%;
+			@include order(1);
+			@include elem-size(40%, 40%);
 		}
 	}
 	p {
-		font-size: 1.1em;
-		line-height: 1.4em;
+		@include text(em(17px), em(22px));
 		@include mq(medium) {
-			margin:0 1em 0 0;
-			font-size: 1.3em;
+			@include set-mp(0 em(16px) 0 0);
+			@include text(em(20px));
 			text-align: left;
-			width: 60%;
+			@include elem-size(60%);
 		}
 		@include mq(large) {
-			margin-right: 2em;
+			margin-right: em(32px);
 		}
 	}
 }

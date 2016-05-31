@@ -13,12 +13,45 @@ $font-family--secondary	: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $white		: #fff;
 $black		: #0b0b0b;
 $grey		: #797e83;
+$green		: #00FF00;
+$red 		: #CC0000;
+$egg-sour	: #FFF4DD;
+$energy-yellow	: #F8DD5C;
+$emerald	: #50C878;
 
-$fountain-blue	: #52bab3;
+// Color Palette Modifiers
+
+$color-palettes: (
+	grey: (
+		xx-light 	: lighten($grey, 40%),
+		x-light 	: lighten($grey, 35%),
+		light 		: lighten($grey, 12%),
+		base 		: $grey,
+		dark 		: darken($grey, 8%),
+		x-dark 		: darken($grey, 16%)
+	),
+	black: (
+		light 		: lighten($black, 10%),
+		base 		: $black,
+		dark 		: darken($black, 10%)
+	),
+	white: (
+		base 		: $white,
+		dark 		: darken($white, 3%)
+	),
+	green: (
+		light 		: lighten($green, 10%),
+		base 		: $green,
+		dark 		: darken($green, 10%)
+	),
+	red: (
+		base 		: $red
+	)
+);
 
 // Color Usage
 
-$color-primary	: $fountain-blue;
+$color-primary	: palette(grey, x-dark);
 
 // Text
 
@@ -36,6 +69,7 @@ $br--round			: 50%;
 $width__main		: 92%;
 
 // Breakpoints
+
 $brkpoint-sm	: 1px;
 $brkpoint-md	: 768px;
 $brkpoint-lg	: 1024px;

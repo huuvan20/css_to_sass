@@ -3,23 +3,19 @@
 // ==========================================================================
 
 .container {
-	background: #FCFBFC;;
-	padding: 2em 0 1em 0;
+	background: palette(white);
+	@include set-mp($padding: em(32px) 0 em(16px) 0);
 	@include mq(medium) {
-		margin-top: 4em;
-		padding: 0 1em;
-		padding-bottom: 2em;
-		display: -webkit-flex;
-		display: flex;
-		-webkit-flex-flow: row wrap;
-		flex-flow: row wrap;
+		margin-top: em(64px);
+		@include set-mp($padding: 0 em(16px));
+		padding-bottom: em(32px);
+		@include flexbox;
+		@include flex-flow(row wrap);
 	}
 	h2 {
-		padding: 0.4em 0;
-		color: #222;
 		@include mq(medium) {
-			width: 100%;
-			margin-top: 2.5em;
+			@include elem-size(100%);
+			margin-top: em(40px);
 		}
 	}
 }

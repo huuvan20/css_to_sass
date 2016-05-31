@@ -4,55 +4,47 @@
 
 footer {
 	@extend %main-width;
-	height: 380px;
-	margin: auto;
+	@include elem-size($height: em(380px));
+	@extend %margin-auto;
 	h2 {
-		padding: 2em 0;
-		color: #222;
+		@include set-mp($padding:em(32px) 0);
 	}
 	p {
-		line-height: 1.5em;
+		@include text($l-height: em(24px));
 	}
 }
 
 .footer-content {
 	@include mq(medium) {
-		width: 70%;
-		margin: 1.5em auto 2em auto;
-		font-size: 1.2em;
+		@include elem-size(70%);
+		@include set-mp(em(24px) auto em(32px) auto);
+		@include text(em(20px));
 	}
 }
 
 .contact-items {
-	line-height: 2.5em;
-	margin: 1.5em auto 3em auto;
+	@include text($l-height: em(40px));
+	@include set-mp(em(24px) auto em(48px) auto);
 }
 
 .foot-footer {
-	border-top: 1px solid #CCCCCC;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-justify-content: space-between;
-	justify-content: space-between;
+	@include border(1px, solid, palette(grey, light), top);
+	@include flexbox();
+	@include justify-content(space-between);
 	@include mq(medium) {
-		margin-bottom: 3em;
-		font-size: 1.1em;
-		-webkit-justify-content: space-between;
-		justify-content: space-between;
-		-webkit-align-items: center;
-		align-items: center;
+		margin-bottom: em(48px);
+		@include text(em(18px));
+		@include align-items(center);
 	}
 	@include mq(large) {
-		margin: 0;
+		@include set-mp(0);
 	}
 	p {
-		margin: 1.7em 0;
-		font-weight: bold;
-		font-size: 0.9em;
-		color: #222;
+		@include set-mp(em(30px) 0);
+		@include text(em(15px), $weight: bold);
+		text-transform: uppercase;
 		a:hover {
-			color: red;
-			text-transform: uppercase;
+			@include text($color: palette(red));
 			transition: 0.5s;
 		}
 	}
@@ -60,7 +52,6 @@ footer {
 }
 
 .mobile-nav {
-	text-transform: uppercase;
 	@include mq(medium) {
 		display: none;
 	}
@@ -69,25 +60,23 @@ footer {
 .foot-nav {
 	display: none;
 	@include mq(medium) {
-		display: -webkit-flex;
-		display: flex;
+		@include flexbox;
 	}
 	a {
 		@include mq(medium) {
 			text-transform: uppercase;
-			font-size: 0.8em;
-			font-weight: bold;
+			@include text(em(14px), $weight: bold);
 		}
 	}
 	li {
 		@include mq(medium) {
-			margin-left: 3em;
-			border-bottom: 2px solid #f7f5f0;
+			@include set-mp($padding: 0 em(24px));
+			@include border(2px, solid, palette(white, dark), bottom);
 		}
 	}
 	li:hover {
 		@include mq(medium) {
-			border-bottom: 2px solid lightgreen;
+			@include border(2px, solid, palette(green, light), bottom);
 			transition: 0.5s;
 		}
 	}
