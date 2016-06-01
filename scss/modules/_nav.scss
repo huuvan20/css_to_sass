@@ -4,7 +4,7 @@
 
 .main-nav {
 	@extend %main-width;
-	min-height: em(250px);
+	min-height: em(120px);
 	@extend %margin-auto;
 	@include mq(medium) {
 		height: em(100px);// just to fix the IE centering vertically
@@ -29,9 +29,6 @@
 			color: palette(red);
 		}
 	}
-	h1, ul {
-		//@include flex-default;
-	}
 }
 
 .nav {
@@ -50,24 +47,21 @@
 		display: block;
 		@include set-mp($padding: em(15px) 0);
 		@include text($color: palette(grey, x-dark));
-		text-transform: uppercase;
 	}
 	li {
 		@include set-mp(em(6px) 0);
-		@include text(em(16px), em(16px), bold);
-		@include border(2px, solid, palette(white, dark), bottom);
-		background : palette(white);
+		@include text(em(16px), em(16px));
+		@include border(1px, solid, palette(grey, xx-light), bottom);
 		@include mq(medium) {
+			border-bottom-color: palette(white, dark);
 			@include elem-size(calc(100% / 3));
-			background : palette(white, dark);
 		}
 		&:hover {
-			border-bottom-color: palette(green, light);
-			transition: 0.5s;
+			border-bottom-color: palette(green, dark);
 		}
 		a {
 			@include mq(medium) {
-				@include set-mp($padding: em(5px));
+				@include set-mp($padding: em(10px));
 			}
 		}
 	}

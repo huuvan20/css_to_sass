@@ -25,6 +25,14 @@
 	width: 1px;
 }
 
+// For pseudo-elements
+
+%pseudos {
+	display: block;
+	content: '';
+	position: absolute;
+}
+
 // Center elements
 
 .centered {
