@@ -12,10 +12,4 @@
 		@include flexbox;
 		@include flex-flow(row wrap);
 	}
-	h2 {
-		@include mq(medium) {
-			@include elem-size(100%);
-			margin-top: em(40px);
-		}
-	}
 }

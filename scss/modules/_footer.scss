@@ -9,9 +9,6 @@ footer {
 	h2 {
 		@include set-mp($padding:em(32px) 0);
 	}
-	p {
-		@include text($l-height: em(24px));
-	}
 }
 
 .footer-content {
@@ -23,42 +20,19 @@ footer {
 }
 
 .contact-items {
-	@include text($l-height: em(40px));
-	@include set-mp(em(24px) auto em(48px) auto);
+	@extend %footer-contact;
 }
 
 .foot-footer {
-	@include border(1px, solid, palette(grey, light), top);
-	@include flexbox();
-	@include justify-content(space-between);
-	@include mq(medium) {
-		margin-bottom: em(48px);
-		@include text(em(18px));
-		@include align-items(center);
-	}
-	@include mq(large) {
-		@include set-mp(0);
-	}
-	p {
-		@include set-mp(em(30px) 0);
-		@include text(em(15px), $weight: bold);
-		text-transform: uppercase;
-		a:hover {
-			@include text($color: palette(red));
-			transition: 0.5s;
-		}
-	}
-
+	@extend %footer-foot;
 }
 
 .mobile-nav {
-	@include mq(medium) {
-		display: none;
-	}
+	@extend %none-dipslay-med;
 }
 
 .foot-nav {
-	display: none;
+	@extend %none-display;
 	@include mq(medium) {
 		@include flexbox;
 	}

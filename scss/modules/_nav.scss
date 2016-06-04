@@ -2,35 +2,6 @@
 // Navigation Styles
 // ==========================================================================
 
-.main-nav {
-	@extend %main-width;
-	min-height: em(120px);
-	@extend %margin-auto;
-	@include mq(medium) {
-		height: em(100px);// just to fix the IE centering vertically
-		min-height: em(200px);
-		@include flexbox();
-		@include flex-direction(column);
-		@include justify-content(space-around);
-	}
-	@include mq(large) {
-		height: em(100px);// just to fix the IE centering vertically
-		min-height: em(150px);
-		@include flex-flow(row wrap);
-		@include justify-content(space-between);
-		@include align-items(center);
-	}
-	h1 {
-		@include text(em(30px));
-		@include mq(medium) {
-			@include set-mp(0, 0);
-		}
-		a {
-			color: palette(red);
-		}
-	}
-}
-
 .nav {
 	@include set-mp(0);
 	@include mq(medium) {
@@ -43,26 +14,10 @@
 		@include elem-size(40%);
 		@include set-mp(0, 0);
 	}
-	a {
-		display: block;
-		@include set-mp($padding: em(15px) 0);
-		@include text($color: palette(grey, x-dark));
-	}
 	li {
-		@include set-mp(em(6px) 0);
-		@include text(em(16px), em(16px));
-		@include border(1px, solid, palette(grey, xx-light), bottom);
-		@include mq(medium) {
-			border-bottom-color: palette(white, dark);
-			@include elem-size(calc(100% / 3));
-		}
-		&:hover {
-			border-bottom-color: palette(green, dark);
-		}
+		@extend %nav-li;
 		a {
-			@include mq(medium) {
-				@include set-mp($padding: em(10px));
-			}
+			@extend %nav-link;
 		}
 	}
 }

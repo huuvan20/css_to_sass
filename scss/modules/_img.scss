@@ -1,0 +1,24 @@
+// ==========================================================================
+// Images
+// ==========================================================================
+
+.img {
+	@include m(profile) {
+		@include elem-size(70%);
+		box-shadow: 10px 10px 10px rgba(0,0,0,.5);
+		@include mq(medium) {
+			@include order(1);
+			@include elem-size(40%, 40%);
+		}
+	}
+	@include m(portfolio) {
+		@include elem-size(100%);
+	}
+	@include m(portfolio-HCMC) {
+		max-height: 100%;
+		max-width: 100%;
+		@include mq(large) {
+			padding-top: em(16px);
+		}
+	}
+}

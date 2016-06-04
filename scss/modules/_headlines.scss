@@ -1,0 +1,18 @@
+// ==========================================================================
+// Headlines
+// ==========================================================================
+
+.headline {
+	&-primary {
+		@extend %hdln-prim;
+	}
+	&-secondary {
+		@extend %hdln-sec;
+		@include m(container) {
+			@include mq(medium) {
+				@include elem-size(100%);
+				margin-top: em(40px);
+			}
+		}
+	}
+} 

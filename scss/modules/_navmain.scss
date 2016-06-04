@@ -1,0 +1,23 @@
+// ==========================================================================
+// Main navigation
+// ==========================================================================
+
+.main-nav {
+	@extend %main-width;
+	min-height: em(120px);
+	@extend %margin-auto;
+	@include mq(medium) {
+		height: em(100px);// just to fix the IE centering vertically
+		min-height: em(200px);
+		@include flexbox();
+		@include flex-direction(column);
+		@include justify-content(space-around);
+	}
+	@include mq(large) {
+		height: em(100px);// just to fix the IE centering vertically
+		min-height: em(150px);
+		@include flex-flow(row wrap);
+		@include justify-content(space-between);
+		@include align-items(center);
+	}
+}

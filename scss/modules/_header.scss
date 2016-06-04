@@ -10,24 +10,4 @@ header {
 		@include flex-direction(row);
 		@include set-mp(0 auto);
 	}
-	img {
-		@include elem-size(70%);
-		box-shadow: 10px 10px 10px rgba(0,0,0,.5);
-		@include mq(medium) {
-			@include order(1);
-			@include elem-size(40%, 40%);
-		}
-	}
-	p {
-		@include text(em(17px), em(22px));
-		@include mq(medium) {
-			@include set-mp(0 em(16px) 0 0);
-			@include text(em(20px));
-			text-align: left;
-			@include elem-size(60%);
-		}
-		@include mq(large) {
-			margin-right: em(32px);
-		}
-	}
 }

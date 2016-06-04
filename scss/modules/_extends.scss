@@ -20,9 +20,13 @@
 
 // Headlines
 
+%hdln-prim {
+	font-size: em(30px);
+}
+
 %hdln-sec {
 	text-transform: uppercase;
-	font-size: 1em;
+	font-size: em(18px);
 }
 
 // Icons
@@ -30,4 +34,66 @@
 %icn--ui {
 	line-height: 0;
 	cursor: pointer;
+}
+
+// Nav list
+
+%nav-li {
+	@include set-mp(em(6px) 0);
+	@include border(1px, solid, palette(grey, xx-light), bottom);
+	@include mq(medium) {
+		border-bottom-color: palette(white, dark);
+		@include elem-size(calc(100% / 3));
+	}
+	&:hover {
+		border-bottom-color: palette(green, dark);
+	}
+}
+
+// Nav link
+
+%nav-link {
+	display: block;
+	@include text(em(15px), em(16px), bold, palette(grey));
+	text-transform: uppercase;
+	@include set-mp($padding: em(15px) 0);
+	@include mq(medium) {
+		@include set-mp($padding: em(10px));
+	}
+}
+
+// Contact
+%footer-contact {
+	@include text($l-height: em(40px));
+	@include set-mp(em(24px) auto em(48px) auto);
+}
+
+// Foot
+
+%footer-foot {
+	@include border(1px, solid, palette(grey, light), top);
+	@include flexbox();
+	@include justify-content(space-between);
+	@include mq(medium) {
+		margin-bottom: em(48px);
+		@include text(em(18px));
+		@include align-items(center);
+	}
+	@include mq(large) {
+		@include set-mp(0);
+	}
+}
+
+// Not display mobile screen
+
+%none-display {
+	display: none;
+}
+
+// Not display medium screen
+
+%none-dipslay-med {
+	@include mq(medium) {
+		display: none;
+	}
 }
