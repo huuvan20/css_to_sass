@@ -5,6 +5,7 @@
 header {
 	@extend %main-width;
 	@extend %margin-auto;
+	margin-top: em(20px);
 	@include mq(medium) {
 		@include flexbox();
 		@include flex-direction(row);

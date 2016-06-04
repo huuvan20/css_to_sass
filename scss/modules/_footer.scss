@@ -45,12 +45,12 @@ footer {
 	li {
 		@include mq(medium) {
 			@include set-mp($padding: 0 em(24px));
-			@include border(2px, solid, palette(white, dark), bottom);
+			@include border(1px, solid, palette(white, dark), bottom);
 		}
 	}
 	li:hover {
 		@include mq(medium) {
-			@include border(2px, solid, palette(green, light), bottom);
+			@include border(1px, solid, palette(green, light), bottom);
 			transition: 0.5s;
 		}
 	}

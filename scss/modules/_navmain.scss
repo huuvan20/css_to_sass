@@ -4,7 +4,7 @@
 
 .main-nav {
 	@extend %main-width;
-	min-height: em(120px);
+	min-height: em(100px);
 	@extend %margin-auto;
 	@include mq(medium) {
 		height: em(100px);// just to fix the IE centering vertically
