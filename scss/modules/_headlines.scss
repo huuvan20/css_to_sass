@@ -4,10 +4,12 @@
 
 .headline {
 	&-primary {
-		@extend %hdln-prim;
+		margin-top: em(20px);
+		@include mq(medium) {
+			margin: 0;
+		}
 	}
 	&-secondary {
-		@extend %hdln-sec;
 		@include m(container) {
 			@include mq(medium) {
 				@include elem-size(100%);

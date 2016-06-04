@@ -18,6 +18,10 @@ body {
 
 // Text
 
+h1 {
+	@extend %hdln-prim;
+}
+
 h2 {
 	@extend %hdln-sec;
 };

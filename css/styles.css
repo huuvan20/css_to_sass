@@ -422,10 +422,11 @@ header, .main-nav, .p--portfolio, .portfolio-HCMC, footer {
 header, .main-nav, .portfolio-item, .portfolio-HCMC, footer {
   width: 92%; }
 
-.headline-primary {
-  font-size: 1.875em; }
+h1 {
+  font-size: 1.875em;
+  margin: 0; }
 
-h2, .headline-secondary {
+h2 {
   text-transform: uppercase;
   font-size: 1.125em; }
 
@@ -553,6 +554,11 @@ h2, .headline-secondary {
       margin: 0;
       padding: 0; } }
 
+.headline-primary {
+  margin-top: 1.25em; }
+  @media screen and (min-width: 769px) {
+    .headline-primary {
+      margin: 0; } }
 @media screen and (min-width: 769px) {
   .headline-secondary--container {
     width: 100%;
