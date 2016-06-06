@@ -21,13 +21,13 @@
 // Headlines
 
 %hdln-prim {
-	font-size: em(30px);
+	font-size: em($hdln-prim__font-size);
 	margin: 0;
 }
 
 %hdln-sec {
 	text-transform: uppercase;
-	font-size: em(18px);
+	font-size: em($hdln-sec__font-size);
 }
 
 // Icons

@@ -34,7 +34,7 @@
 		@include text(em(15px), $weight: bold);
 		text-transform: uppercase;
 		a:hover {
-			@include text($color: palette(red));
+			color: $red;
 			transition: 0.5s;
 		}
 	}
