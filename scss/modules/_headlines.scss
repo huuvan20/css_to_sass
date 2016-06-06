@@ -10,11 +10,9 @@
 		}
 	}
 	&-secondary {
-		@include m(container) {
 			@include mq(medium) {
 				@include elem-size(100%);
 				margin-top: em(40px);
-			}
 		}
 	}
 } 
