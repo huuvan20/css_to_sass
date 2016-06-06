@@ -55,7 +55,7 @@
 
 %nav-link {
 	display: block;
-	@include text(em(15px), em(16px), bold, palette(grey));
+	@include text(em($base__font-size), em(16px), bold, palette(grey));
 	text-transform: uppercase;
 	@include set-mp($padding: em(15px) 0);
 	@include mq(medium) {
@@ -77,7 +77,7 @@
 	@include justify-content(space-between);
 	@include mq(medium) {
 		margin-bottom: em(48px);
-		@include text(em(18px));
+		@include text(em($medium__font-size));
 		@include align-items(center);
 	}
 	@include mq(large) {

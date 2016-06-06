@@ -446,7 +446,7 @@ h2 {
 
 .nav li a {
   display: block;
-  font-size: 0.9375em;
+  font-size: 1em;
   line-height: 1em;
   font-weight: bold;
   color: #797e83;
@@ -611,7 +611,7 @@ header {
   line-height: 1.5em; }
 .p--foot-footer {
   margin: 1.875em 0;
-  font-size: 0.9375em;
+  font-size: 0.875em;
   font-weight: bold;
   text-transform: uppercase; }
   .p--foot-footer a:hover {

@@ -15,7 +15,7 @@ footer {
 	@include mq(medium) {
 		@include elem-size(70%);
 		@include set-mp(em(24px) auto em(32px) auto);
-		@include text(em(20px));
+		@include text(em($large__font-size));
 	}
 }
 
@@ -39,7 +39,7 @@ footer {
 	a {
 		@include mq(medium) {
 			text-transform: uppercase;
-			@include text(em(14px), $weight: bold);
+			@include text(em($small__font-size), $weight: bold);
 		}
 	}
 	li {
